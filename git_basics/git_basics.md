@@ -82,6 +82,51 @@ Another useful thing you may want to do is to keep the file in your working tree
 
 ---
 
+### Viewing the Commit History
+`$ git log`
+
+To see patch or differences introduces in each commit use
+
+`$ git log -p` \
+or \
+`$ git log --patch`
+
+You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
+
+`$ git log -p -2`
+
+if you want to see some abbreviated stats for each commit, you can use the --stat option:
+
+`$ git log --stat`
+
+For pretty oneline output
+
+`$ git log --pretty=oneline`
+
+---
+
+### Undoing Things
+If you want to forgot one file to add in previous commit and don't want to add another commit then use ammend
+
+It will basically replace the last commit
+
+`$ git commit --amend`
+
+* Only amend commits that are still local and have not been pushed somewhere. Amending previously pushed commits and force pushing the branch will cause problems for your collaborators. 
+
+### Unstaging a Staged File
+
+`$ git restore --staged <file_name>`
+
+### Restoring from last commited
+
+`$ git restore <file_name>`
+
+* It’s important to understand that git restore <file> is a dangerous command. Any local changes you made to that file are gone 
+
+
+
+
 
 
 
